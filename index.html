@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tendencia Informativa | Noticias en Tiempo Real</title>
+    <style>
+        :root {
+            --rojo: #ce1212;
+            --negro: #121212;
+            --gris-oscuro: #1e1e1e;
+            --blanco: #ffffff;
+            --gris-fondo: #f8f9fa;
+        }
+
+        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; margin: 0; background-color: var(--gris-fondo); color: var(--negro); line-height: 1.6; }
+        
+        /* HEADER PROFESIONAL */
+        header { background-color: var(--negro); color: var(--blanco); padding: 15px 5%; border-bottom: 4px solid var(--rojo); position: sticky; top: 0; z-index: 1000; }
+        .header-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
+        
+        .logo { font-size: 26px; font-weight: 800; text-transform: uppercase; letter-spacing: -0.5px; display: flex; align-items: center; }
+        .logo .box { background-color: var(--rojo); color: white; padding: 2px 8px; margin-right: 5px; border-radius: 2px; }
+        
+        nav ul { list-style: none; display: flex; gap: 25px; padding: 0; margin: 0; }
+        nav a { color: var(--blanco); text-decoration: none; font-weight: 600; font-size: 13px; text-transform: uppercase; transition: 0.3s; }
+        nav a:hover { color: var(--rojo); }
+
+        /* BARRA DE ÚLTIMA HORA */
+        .breaking-news { background: var(--rojo); color: white; display: flex; align-items: center; font-size: 14px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+        .breaking-label { background: #900; padding: 12px 25px; font-weight: bold; position: relative; z-index: 2; }
+        .breaking-text { flex-grow: 1; font-style: italic; }
+
+        /* CUERPO DE LA PÁGINA */
+        .main-content { max-width: 1200px; margin: 30px auto; display: grid; grid-template-columns: 2fr 1fr; gap: 30px; padding: 0 20px; }
+
+        /* NOTICIA PRINCIPAL */
+        .hero-article { background: white; border-radius: 4px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .hero-article img { width: 100%; height: 450px; object-fit: cover; transition: 0.5s; }
+        .hero-article:hover img { transform: scale(1.02); }
+        .article-content { padding: 30px; }
+        .tag { background: var(--rojo); color: white; padding: 3px 10px; font-size: 11px; font-weight: bold; text-transform: uppercase; border-radius: 2px; }
+        h1 { font-size: 38px; margin: 15px 0; color: var(--negro); line-height: 1.1; font-weight: 800; }
+        p { color: #555; font-size: 17px; }
+
+        /* SIDEBAR (LO MÁS LEÍDO) */
+        .sidebar { background: white; padding: 25px; border-top: 5px solid var(--negro); border-radius: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .sidebar-h3 { text-transform: uppercase; font-size: 18px; margin-bottom: 25px; display: flex; align-items: center; }
+        .sidebar-h3::after { content: ""; flex-grow: 1; height: 2px; background: var(--rojo); margin-left: 10px; }
+        
+        .top-post { display: flex; gap: 15px; margin-bottom: 20px; border-bottom: 1px solid #f0f0f0; padding-bottom: 15px; text-decoration: none; color: inherit; }
+        .top-post:last-child { border: none; }
+        .rank { font-size: 32px; font-weight: 900; color: #eee; line-height: 1; }
+        .top-post:hover .post-title { color: var(--rojo); }
+        .post-title { font-weight: 700; font-size: 15px; transition: 0.2s; }
+
+        /* FOOTER */
+        footer { background: var(--negro); color: #888; text-align: center; padding: 50px 0; margin-top: 60px; border-top: 5px solid var(--rojo); }
+        .footer-logo { color: white; font-size: 20px; font-weight: bold; margin-bottom: 10px; }
+
+        /* RESPONSIVO */
+        @media (max-width: 900px) {
+            .main-content { grid-template-columns: 1fr; }
+            h1 { font-size: 28px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <div class="box">T</div> TENDENCIA <span>INFORMATIVA</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Política</a></li>
+                    <li><a href="#">Economía</a></li>
+                    <li><a href="#">Deportes</a></li>
+                    <li><a href="#">Cultura</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="breaking-news">
+        <div class="breaking-label">ÚLTIMA HORA</div>
+        <div class="breaking-text">
+            <marquee scrollamount="6">Tendencia Informativa: Los mercados globales reaccionan a los nuevos cambios tecnológicos -- Se anuncian nuevas medidas para la protección ambiental en la cumbre anual -- Sigue nuestra cobertura en vivo las 24 horas.</marquee>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <!-- NOTICIA PRINCIPAL -->
+        <section>
+            <article class="hero-article">
+                <img src="https://images.unsplash.com" alt="Noticia Principal">
+                <div class="article-content">
+                    <span class="tag">Titulares</span>
+                    <h1>Tendencia Informativa analiza el impacto de la nueva economía digital</h1>
+                    <p>En un reporte exclusivo, nuestros analistas detallan cómo las nuevas regulaciones afectarán el bolsillo de los ciudadanos y el crecimiento de las startups en la región...</p>
+                    <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+                    <button style="background:var(--negro); color:white; border:none; padding:12px 25px; font-weight:bold; cursor:pointer;">Continuar leyendo</button>
+                </div>
+            </article>
+        </section>
+
+        <!-- COLUMNA LATERAL -->
+        <aside class="sidebar">
+            <div class="sidebar-h3">Lo más visto</div>
+            
+            <a href="#" class="top-post">
+                <div class="rank">01</div>
+                <div class="post-title">El avance de la Inteligencia Artificial en la educación básica.</div>
+            </a>
+
+            <a href="#" class="top-post">
+                <div class="rank">02</div>
+                <div class="post-title">Nuevos descubrimientos astronómicos revelan datos sobre Marte.</div>
+            </a>
+
+            <a href="#" class="top-post">
+                <div class="rank">03</div>
+                <div class="post-title">Resumen de la jornada: Los equipos que lideran la tabla.</div>
+            </a>
+
+            <a href="#" class="top-post">
+                <div class="rank">04</div>
+                <div class="post-title">Guía para mejorar la ciberseguridad en tus cuentas personales.</div>
+            </a>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="footer-logo">TENDENCIA INFORMATIVA</div>
+        <p>Periodismo comprometido con la verdad y la inmediatez.</p>
+        <p style="font-size: 12px;">&copy; 2024 Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
