@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tendencia Informativa | El Poder de la Noticia</title>
-    <!-- Fuentes y Iconos -->
+    <!-- Fuentes e Iconos -->
     <link href="https://fonts.googleapis.com" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
     
@@ -12,17 +12,15 @@
         :root {
             --rojo: #ce1212;
             --negro: #121212;
-            --gris-oscuro: #1e1e1e;
             --blanco: #ffffff;
             --gris-fondo: #f0f0f0;
         }
 
         body { font-family: 'Roboto', sans-serif; margin: 0; background-color: var(--gris-fondo); scroll-behavior: smooth; }
 
-        /* HEADER & NAV */
+        /* HEADER Y NAVEGACIÓN */
         header { background-color: var(--negro); padding: 10px 5%; border-bottom: 5px solid var(--rojo); position: sticky; top: 0; z-index: 1000; }
         .header-container { display: flex; justify-content: space-between; align-items: center; max-width: 1300px; margin: 0 auto; flex-wrap: wrap; }
-        
         .logo-container img { height: 65px; width: auto; }
 
         nav ul { list-style: none; display: flex; gap: 15px; padding: 0; margin: 0; flex-wrap: wrap; }
@@ -37,32 +35,28 @@
         .breaking-news { background: var(--rojo); color: white; display: flex; align-items: center; font-size: 14px; font-weight: bold; height: 40px; }
         .breaking-label { background: #900; padding: 0 20px; height: 100%; display: flex; align-items: center; text-transform: uppercase; }
 
-        /* CUERPO PRINCIPAL */
+        /* CONTENEDOR PRINCIPAL */
         .container { max-width: 1300px; margin: 20px auto; display: grid; grid-template-columns: 1fr 2fr 1fr; gap: 20px; padding: 0 20px; }
-
         .section-title { background: var(--negro); color: white; padding: 10px; font-family: 'Oswald', sans-serif; border-left: 5px solid var(--rojo); text-transform: uppercase; margin-bottom: 15px; }
 
-        /* CARDS DE NOTICIAS */
+        /* TARJETAS DE NOTICIAS */
         .news-card { background: white; margin-bottom: 20px; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
         .news-card img { width: 100%; height: 180px; object-fit: cover; }
         .news-card-content { padding: 15px; }
         .news-card h3 { font-family: 'Oswald', sans-serif; margin: 0 0 10px 0; font-size: 18px; line-height: 1.2; }
         .news-card p { font-size: 14px; color: #555; margin: 0; }
 
-        /* BOTONES FLOTANTES REDES */
+        /* BOTONES REDES SOCIALES */
         .social-float { position: fixed; right: 20px; bottom: 20px; display: flex; flex-direction: column; gap: 10px; z-index: 2000; }
         .social-icon { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 24px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: 0.3s; }
         .whatsapp { background-color: #25d366; }
         .tiktok { background-color: #000000; }
         .social-icon:hover { transform: scale(1.1); }
 
-        /* FOOTER */
+        /* PIE DE PÁGINA */
         footer { background: var(--negro); color: white; text-align: center; padding: 40px 0; border-top: 5px solid var(--rojo); margin-top: 40px; }
 
-        /* RESPONSIVO */
-        @media (max-width: 1024px) {
-            .container { grid-template-columns: 1fr; }
-        }
+        @media (max-width: 1024px) { .container { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -70,7 +64,7 @@
     <header>
         <div class="header-container">
             <div class="logo-container">
-                <img src="logo.png" alt="Tendencia Informativa">
+                <img src="logo.png" alt="Tendencia Informativa Logo">
             </div>
             <nav>
                 <ul>
@@ -91,18 +85,18 @@
 
     <div class="breaking-news">
         <div class="breaking-label"><i class="fa fa-bolt"></i> En Vivo</div>
-        <marquee scrollamount="6">Sigue la cobertura minuto a minuto de Tendencia Informativa -- Actualización automática activada -- Reporte de noticias globales.</marquee>
+        <marquee scrollamount="6">TENDENCIA INFORMATIVA: Actualización de noticias globales en tiempo real -- Cobertura especial disponible ahora.</marquee>
     </div>
 
     <div class="container">
-        <!-- COLUMNA IZQUIERDA: COMUNIDAD Y CULTURA -->
+        <!-- COLUMNA IZQUIERDA -->
         <aside>
             <div id="comunidad">
                 <h2 class="section-title">Comunidad</h2>
                 <div class="news-card">
                     <div class="news-card-content">
-                        <h3>Reporte Vecinal: Mejoras en servicios</h3>
-                        <p>Vecinos logran acuerdo para la restauración del parque local...</p>
+                        <h3>Acciones vecinales logran cambios</h3>
+                        <p>Nuevos proyectos comunitarios inician esta semana en el sector.</p>
                     </div>
                 </div>
             </div>
@@ -111,52 +105,46 @@
                 <div class="news-card">
                     <img src="https://images.unsplash.com" alt="Cultura">
                     <div class="news-card-content">
-                        <h3>Festival de Arte Moderno</h3>
-                        <p>Inicia la exposición anual con artistas nacionales destacados.</p>
+                        <h3>Exposición de Arte Nacional</h3>
+                        <p>Talento local brilla en la nueva galería del centro histórico.</p>
                     </div>
                 </div>
             </div>
         </aside>
 
-        <!-- COLUMNA CENTRAL: NACIONAL E INTERNACIONAL (AUTO-ACTUALIZABLE) -->
+        <!-- COLUMNA CENTRAL -->
         <main>
             <div id="nacional">
                 <h2 class="section-title">Noticias Nacionales</h2>
-                <div id="nacional-feed">
-                    <!-- Las noticias se cargan aquí -->
-                    <div class="news-card">
-                        <img src="https://images.unsplash.com" alt="Nacional">
-                        <div class="news-card-content">
-                            <h3>Titulares del Día en la Nación</h3>
-                            <p>Cargando información actualizada de las principales ciudades...</p>
-                        </div>
+                <div class="news-card">
+                    <img src="https://images.unsplash.com" alt="Nacional">
+                    <div class="news-card-content">
+                        <h3>Avances en la Infraestructura del País</h3>
+                        <p>El gobierno anuncia la finalización de las obras principales para conectar el comercio nacional.</p>
                     </div>
                 </div>
             </div>
-
             <div id="internacional">
                 <h2 class="section-title">Internacionales</h2>
-                <div id="internacional-feed">
-                    <div class="news-card">
-                        <img src="https://images.unsplash.com" alt="Internacional">
-                        <div class="news-card-content">
-                            <h3>El Mundo Hoy</h3>
-                            <p>Actualizando cables internacionales de última hora...</p>
-                        </div>
+                <div class="news-card">
+                    <img src="https://images.unsplash.com" alt="Internacional">
+                    <div class="news-card-content">
+                        <h3>Cumbre Global sobre Tecnología</h3>
+                        <p>Líderes mundiales discuten el futuro de la inteligencia artificial y el clima.</p>
                     </div>
                 </div>
             </div>
         </main>
 
-        <!-- COLUMNA DERECHA: DEPORTES Y FARÁNDULA -->
+        <!-- COLUMNA DERECHA -->
         <aside>
             <div id="deportes">
                 <h2 class="section-title">Deportes</h2>
                 <div class="news-card">
                     <img src="https://images.unsplash.com" alt="Deportes">
                     <div class="news-card-content">
-                        <h3>Resultados de la Jornada</h3>
-                        <p>Sigue el tablero de posiciones de tus equipos favoritos.</p>
+                        <h3>Resultados de las eliminatorias</h3>
+                        <p>Sigue el desempeño de tus equipos favoritos en la tabla general.</p>
                     </div>
                 </div>
             </div>
@@ -165,42 +153,23 @@
                 <div class="news-card">
                     <img src="https://images.unsplash.com" alt="Farandula">
                     <div class="news-card-content">
-                        <h3>Escándalos y Estrenos</h3>
-                        <p>Lo que las estrellas no quieren que sepas esta semana.</p>
+                        <h3>Estrenos y Alfombras Rojas</h3>
+                        <p>Lo último del espectáculo y las estrellas del momento.</p>
                     </div>
                 </div>
             </div>
         </aside>
     </div>
 
-    <!-- BOTONES REDES SOCIALES FLOTANTES -->
+    <!-- BOTONES REDES SOCIALES -->
     <div class="social-float">
-        <a href="https://wa.me" class="social-icon whatsapp" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="https://tiktok.com" class="social-icon tiktok" target="_blank">
-            <i class="fab fa-tiktok"></i>
-        </a>
+        <a href="https://wa.me" class="social-icon whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://tiktok.com" class="social-icon tiktok" target="_blank"><i class="fab fa-tiktok"></i></a>
     </div>
 
     <footer>
-        <img src="logo.png" alt="Logo" style="height: 50px; filter: brightness(0) invert(1);">
-        <p>&copy; 2026 Tendencia Informativa | Periodismo Digital Profesional</p>
+        <p>&copy; 2026 Tendencia Informativa | Periodismo Profesional</p>
     </footer>
-
-    <!-- SCRIPT PARA SIMULAR ACTUALIZACIÓN AUTOMÁTICA -->
-    <script>
-        function actualizarNoticias() {
-            console.log("Buscando nuevas noticias...");
-            // Aquí puedes conectar una API real como NewsAPI.org más adelante
-            const feeds = ['nacional-feed', 'internacional-feed'];
-            feeds.forEach(id => {
-                const el = document.getElementById(id);
-                // Esto simula que la información "cambia" sola
-            });
-        }
-        setInterval(actualizarNoticias, 300000); // Se actualiza cada 5 minutos
-    </script>
 
 </body>
 </html>
