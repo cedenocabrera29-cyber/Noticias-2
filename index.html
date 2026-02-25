@@ -3,9 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Tendencia Informativa | Noticias Reales</title>
     <!-- Iconos profesionales -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
+=======
+    <title>Tendencia Informativa | El Poder de la Noticia</title>
+    
+    <!-- LIBRERÍA DE ICONOS (CORRIGE WHATSAPP Y TIKTOK) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
+    <!-- FUENTES PROFESIONALES -->
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+    
+>>>>>>> ccfb1eb8ae857abf7d50cd6eebfa1a4522e6eb27
     <style>
         /* CONFIGURACIÓN GENERAL */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial Black', sans-serif; }
@@ -60,16 +70,71 @@
             .logo-box { flex-direction: column; text-align: center; }
             .top-nav { flex-direction: column; gap: 15px; }
         }
+<<<<<<< HEAD
+=======
+
+        body { font-family: 'Roboto', sans-serif; margin: 0; background-color: var(--gris-fondo); scroll-behavior: smooth; }
+
+        /* HEADER */
+        header { background-color: var(--negro); padding: 10px 5%; border-bottom: 5px solid var(--rojo); position: sticky; top: 0; z-index: 1000; }
+        .header-container { display: flex; justify-content: space-between; align-items: center; max-width: 1300px; margin: 0 auto; flex-wrap: wrap; }
+        .logo-container img { height: 65px; width: auto; display: block; }
+
+        nav ul { list-style: none; display: flex; gap: 15px; padding: 0; margin: 0; flex-wrap: wrap; }
+        nav a { color: var(--blanco); text-decoration: none; font-weight: 700; font-size: 13px; text-transform: uppercase; font-family: 'Oswald', sans-serif; transition: 0.3s; }
+        nav a:hover { color: var(--rojo); }
+
+        /* BUSCADOR */
+        .search-box { display: flex; background: #333; border-radius: 20px; padding: 5px 15px; align-items: center; }
+        .search-box input { background: transparent; border: none; color: white; outline: none; padding: 5px; width: 120px; }
+
+        /* BARRA DE ÚLTIMA HORA */
+        .breaking-news { background: var(--rojo); color: white; display: flex; align-items: center; font-size: 14px; font-weight: bold; height: 40px; }
+        .breaking-label { background: #900; padding: 0 20px; height: 100%; display: flex; align-items: center; text-transform: uppercase; }
+
+        /* CONTENEDOR PRINCIPAL */
+        .container { max-width: 1300px; margin: 20px auto; display: grid; grid-template-columns: 1fr 2fr 1fr; gap: 20px; padding: 0 20px; }
+        .section-title { background: var(--negro); color: white; padding: 10px; font-family: 'Oswald', sans-serif; border-left: 5px solid var(--rojo); text-transform: uppercase; margin-bottom: 15px; }
+
+        /* TARJETAS DE NOTICIAS */
+        .news-card { background: white; margin-bottom: 20px; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .news-card img { width: 100%; height: 180px; object-fit: cover; border-bottom: 2px solid var(--rojo); }
+        .news-card-content { padding: 15px; }
+        .news-card h3 { font-family: 'Oswald', sans-serif; margin: 0 0 10px 0; font-size: 18px; line-height: 1.2; }
+        .news-card p { font-size: 14px; color: #555; margin: 0; }
+
+        /* BOTONES REDES SOCIALES FLOTANTES */
+        .social-float { position: fixed; right: 20px; bottom: 20px; display: flex; flex-direction: column; gap: 15px; z-index: 9999; }
+        .social-icon { width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 28px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: 0.3s; }
+        .whatsapp { background-color: #25d366; }
+        .tiktok { background-color: #000000; }
+        .social-icon:hover { transform: scale(1.1); }
+
+        /* PIE DE PÁGINA */
+        footer { background: var(--negro); color: white; text-align: center; padding: 40px 0; border-top: 5px solid var(--rojo); margin-top: 40px; }
+
+        @media (max-width: 1024px) { 
+            .container { grid-template-columns: 1fr; } 
+            .header-container { justify-content: center; gap: 15px; }
+        }
+>>>>>>> ccfb1eb8ae857abf7d50cd6eebfa1a4522e6eb27
     </style>
 </head>
 <body>
 
     <header>
+<<<<<<< HEAD
         <div class="top-nav">
             <!-- LOGO + NOMBRE -->
             <div class="logo-box">
                 <img src="logo.png" alt="Logo" class="logo-img">
                 <div class="logo-text">TENDENCIA <span>INFORMATIVA</span></div>
+=======
+        <div class="header-container">
+            <div class="logo-container">
+                <!-- ASEGÚRATE QUE EL ARCHIVO SE LLAME logo.png -->
+                <img src="logo.png" alt="Logo" onerror="this.src='https://via.placeholder.com'">
+>>>>>>> ccfb1eb8ae857abf7d50cd6eebfa1a4522e6eb27
             </div>
             <!-- REDES SOCIALES -->
             <div class="social-icons">
@@ -79,6 +144,7 @@
         </div>
     </header>
 
+<<<<<<< HEAD
     <nav>
         <ul>
             <li><a href="#nacionales">Nacionales</a></li>
@@ -101,22 +167,69 @@
                     <p>Mantente al día con los sucesos más importantes que ocurren en el país hoy.</p>
                 </div>
             </article>
+=======
+    <div class="breaking-news">
+        <div class="breaking-label"><i class="fa fa-bolt"></i> En Vivo</div>
+        <marquee scrollamount="6">TENDENCIA INFORMATIVA: Tu fuente de noticias Nacionales, Internacionales y Farándula en tiempo real.</marquee>
+    </div>
+
+    <div class="container">
+        <!-- COLUMNA IZQUIERDA -->
+        <aside>
+            <div id="comunidad">
+                <h2 class="section-title">Comunidad</h2>
+                <div class="news-card">
+                    <div class="news-card-content">
+                        <h3>Acción vecinal logra mejoras</h3>
+                        <p>Nuevos proyectos comunitarios aprobados para este mes.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="cultura">
+                <h2 class="section-title">Cultura</h2>
+                <div class="news-card">
+                    <img src="https://images.unsplash.com" alt="Cultura">
+                    <div class="news-card-content">
+                        <h3>Arte Moderno en la Ciudad</h3>
+                        <p>Exposición abierta al público en el centro histórico.</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+>>>>>>> ccfb1eb8ae857abf7d50cd6eebfa1a4522e6eb27
 
             <!-- BARRA LATERAL INTERNACIONAL -->
             <aside id="internacionales">
                 <div class="section-title">Internacionales</div>
                 <div class="news-card">
+<<<<<<< HEAD
                     <span class="tag">MUNDO</span>
                     <h3>Sucesos que cambian el panorama global hoy</h3>
+=======
+                    <img src="https://images.unsplash.com" alt="Nacional">
+                    <div class="news-card-content">
+                        <h3>Actualidad del País</h3>
+                        <p>Reporte detallado sobre los avances en infraestructura y economía nacional hoy.</p>
+                    </div>
+>>>>>>> ccfb1eb8ae857abf7d50cd6eebfa1a4522e6eb27
                 </div>
                 <br>
                 <div class="news-card">
+<<<<<<< HEAD
                     <span class="tag">TECNOLOGÍA</span>
                     <h3>Avances digitales que debes conocer este 2026</h3>
+=======
+                    <img src="https://images.unsplash.com" alt="Internacional">
+                    <div class="news-card-content">
+                        <h3>Noticias del Mundo</h3>
+                        <p>Los eventos globales que están marcando la pauta internacional en este momento.</p>
+                    </div>
+>>>>>>> ccfb1eb8ae857abf7d50cd6eebfa1a4522e6eb27
                 </div>
             </aside>
         </div>
 
+<<<<<<< HEAD
         <!-- OTRAS SECCIONES -->
         <div class="section-title">Otras categorías</div>
         <div class="grid-news">
@@ -140,6 +253,48 @@
         <div class="logo-text">TENDENCIA <span>INFORMATIVA</span></div>
         <p>Tendencia Informativa... Tu Alternativa Digital..</p>
         <p>&copy; 2026 - Todos los derechos reservados.</p>
+=======
+        <!-- COLUMNA DERECHA -->
+        <aside>
+            <div id="deportes">
+                <h2 class="section-title">Deportes</h2>
+                <div class="news-card">
+                    <img src="https://images.unsplash.com" alt="Deportes">
+                    <div class="news-card-content">
+                        <h3>Minuto Deportivo</h3>
+                        <p>Resultados actualizados de las ligas más importantes del mundo.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="farandula">
+                <h2 class="section-title">Farándula</h2>
+                <div class="news-card">
+                    <img src="https://images.unsplash.com" alt="Farandula">
+                    <div class="news-card-content">
+                        <h3>Especial Farándula</h3>
+                        <p>Todo sobre el espectáculo, alfombras rojas y los artistas del momento.</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- BOTONES REDES SOCIALES FLOTANTES -->
+    <div class="social-float">
+        <!-- Reemplaza el número de teléfono abajo -->
+        <a href="https://wa.me" class="social-icon whatsapp" target="_blank" title="Escríbenos">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <!-- Reemplaza tu usuario de tiktok abajo -->
+        <a href="https://tiktok.com" class="social-icon tiktok" target="_blank" title="Síguenos">
+            <i class="fab fa-tiktok"></i>
+        </a>
+    </div>
+
+    <footer>
+        <p><strong>TENDENCIA INFORMATIVA</strong></p>
+        <p>&copy; 2026 Todos los derechos reservados | Periodismo Profesional</p>
+>>>>>>> ccfb1eb8ae857abf7d50cd6eebfa1a4522e6eb27
     </footer>
 
 </body>
